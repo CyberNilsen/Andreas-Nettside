@@ -169,7 +169,7 @@ nav a:hover {
 }
 
 .project {
-    max-width: 800px; 
+    max-width: 500px; 
     padding: 20px;
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -179,7 +179,7 @@ nav a:hover {
 }
 
 .project img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 8px;
 }
