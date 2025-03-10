@@ -23,7 +23,7 @@ På denne nettsiden kan du lære mer om mine ferdigheter, prosjektene jeg jobber
 
 ## Hvordan Se Nettsiden
 
-For å se nettsiden, kan du besøke [nettsiden min via lenken her:](https://cybernilsen.github.io/Andreas-Nettside/).
+For å se nettsiden, kan du besøke [nettsiden min via teksen her](https://cybernilsen.github.io/Andreas-Nettside/).
 
 ## Skjermbilde av Nettsiden
 
