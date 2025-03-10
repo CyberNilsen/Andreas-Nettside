@@ -29,4 +29,4 @@ For å se nettsiden, kan du besøke [min GitHub Pages nettside](https://cybernil
 
 Her er et skjermbilde av hvordan nettsiden ser ut:
 
-![Screenshot of Andreas-Nettside](https://cybernilsen.github.io/Andreas-Nettside/Images/skjermbilde.png)
+![Screenshot of Andreas-Nettside](https://cybernilsen.github.io/Andreas-Nettside/Images/Skjermbilde.png)
