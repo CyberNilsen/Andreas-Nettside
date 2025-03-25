@@ -178,6 +178,8 @@ nav a:hover {
     text-align: center;
 }
 
+
+
 .project img {
     max-width: 80%;
     height: auto;
@@ -212,68 +214,127 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-.contact-form {
+.content.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.contact-info {
     width: 100%;
-    max-width: 800px; 
-    margin: 20px auto;
+    max-width: 800px;
+    background: #FFFFFF;
     padding: 40px;
-    background: #FFFFFF; 
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-details h3 {
+    color: #0056B3;
+    margin-top: 20px;
+}
+
+.contact-details a {
+    color: #2C2C2C;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-details a:hover {
+    color: #0056B3;
+}
+
+.social-contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-contact a {
+    margin: 0 10px;
+}
+
+.social-contact img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s;
+}
+
+.social-contact img:hover {
+    transform: scale(1.1);
+}
+
+
+.version-log {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.contact-form label {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-top: 12px; 
-    color: #333;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 95%;
-    padding: 15px; 
-    margin-top: 10px; 
-    border: 1px solid #D1D1D1;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #0056B3; 
-    outline: none;
-}
-
-.contact-form button {
     margin-top: 20px;
-    padding: 12px; 
-    background-color: #0056B3;
-    color: white;
+}
+
+.version-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px; 
+    margin-bottom: 20px;
+    background-color: #f4f4f4; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px; 
+}
+
+.version-entry:hover {
+    transform: scale(1.02);
+}
+
+.version-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
     font-size: 1.1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.contact-form button:hover {
-    background-color: #003F80;
-    transform: scale(1.05); 
+.version-number {
+    background: #007BFF;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
 }
 
-.version-title {
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #007bff; 
+.version-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.version-entry img.version-image {
+    max-width: 350px; 
+    margin-left: 20px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 20px; 
+}
+
+.version-entry .version-header {
+    margin-bottom: 15px; 
+}
+
+.cybertools-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 
@@ -387,26 +448,7 @@ footer {
     .content.about p {
         font-size: 1.1rem;
     }
-
-    .contact-form {
-        max-width: 90%; 
-        padding: 25px;
-    }
-
-    .contact-form label {
-        font-size: 1rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        padding: 12px;
-        font-size: 1rem;
-    }
-
-    .contact-form button {
-        padding: 14px;
-    }
-
+   
     .footer-container {
         flex-direction: column;
         align-items: center;
