@@ -1,32 +1,32 @@
-# Andreas-Nettside
+# Andreas-Site
 
-Velkommen til **Andreas-Nettside**! Dette prosjektet er en personlig nettside laget for å dele informasjon om meg, mine ferdigheter, og prosjektene mine. Nettsiden er kodet med HTML og CSS.
+Welcome to **Andreas-Site**! This project is a personal website created to share information about me, my skills, and my projects. The website is coded using HTML and CSS.
 
-## Om Meg
+## About Me
 
-Hei, jeg heter Andreas! Jeg er en utvikler med stor interesse for **programmering**, **cybersikkerhet**, og **programvareutvikling**. Jeg elsker å lære nye ting og bygge løsninger som er både kreative og effektive.
+Hi, my name is Andreas! I am a developer with a strong interest in **programming**, **cybersecurity**, and **software development**. I love learning new things and building solutions that are both creative and efficient.
 
-På denne nettsiden kan du lære mer om mine ferdigheter, prosjektene jeg jobber med, og hvordan du kan komme i kontakt med meg.
+On this website, you can learn more about my skills, the projects I am working on, and how to get in touch with me.
 
-## Funksjoner
+## Features
 
-- En **responsiv layout** som fungerer godt på både desktop og mobil.
-- **Ferdigheter**: Du kan se en oversikt over mine ferdigheter som utvikler, inkludert HTML, CSS, Python, og mer.
-- **Prosjekter**: En seksjon der du kan se noen av mine utvalgte prosjekter.
-- **Kontakt**: Kontaktinfo slik at du kan nå meg via e-post eller GitHub.
+- A **responsive layout** that works well on both desktop and mobile.
+- **Skills**: You can see an overview of my skills as a developer, including HTML, CSS, Python, and more.
+- **Projects**: A section where you can see some of my selected projects.
+- **Contact**: Contact info so you can reach me via email or GitHub.
 
-## Kode Brukt
+## Code Used
 
-- **HTML**: Strukturen på nettsiden.
-- **CSS**: Design og styling.
-- **GitHub Pages**: Hosting av nettsiden.
+- **HTML**: The structure of the website.
+- **CSS**: Design and styling.
+- **GitHub Pages**: Hosting the website.
 
-## Hvordan Se Nettsiden
+## How to View the Website
 
-For å se nettsiden, kan du besøke [nettsiden min via teksen her](https://cybernilsen.github.io/Andreas-Nettside/).
+To view the website, you can visit [my website via the link here](https://cybernilsen.github.io/Andreas-Nettside/).
 
-## Skjermbilde av Nettsiden
+## Screenshot of the Website
 
-Her er et skjermbilde av hvordan nettsiden ser ut:
+Here’s a screenshot of how the website looks:
 
-![Screenshot of Andreas-Nettside](https://cybernilsen.github.io/Andreas-Nettside/Images/Skjermbilde.png)
+![Screenshot of Andreas-Site](https://cybernilsen.github.io/Andreas-Nettside/Images/Skjermbilde.png)
