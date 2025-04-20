@@ -16,7 +16,6 @@
     --border-radius: 8px;
 }
 
-/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +43,6 @@ img {
     max-width: 100%;
 }
 
-/* Header Styles */
 #main-header {
     display: flex;
     justify-content: space-between;
@@ -101,7 +99,6 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* Hero Section */
 .hero {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding: 5rem 5%;
@@ -203,7 +200,6 @@ nav a:hover::after {
     transform: scale(1.05);
 }
 
-/* Expertise Section */
 .expertise {
     padding: 5rem 5%;
     background-color: var(--lighter-bg);
@@ -267,7 +263,6 @@ nav a:hover::after {
     color: var(--secondary-color);
 }
 
-/* Skills Section */
 .skills {
     padding: 5rem 5%;
     background-color: #f5f5f5;
@@ -320,7 +315,6 @@ nav a:hover::after {
     transition: width 1s ease;
 }
 
-/* Projects Section */
 .featured-projects {
     padding: 5rem 5%;
     background-color: var(--lighter-bg);
@@ -392,7 +386,6 @@ nav a:hover::after {
     margin-top: 3rem;
 }
 
-/* CTA Section */
 .cta-section {
     padding: 5rem 5%;
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
@@ -427,7 +420,151 @@ nav a:hover::after {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
+.about-hero {
+    background: linear-gradient(135deg, #0056b3 0%, #003f80 100%);
+    color: white;
+    padding: 4rem 5%;
+}
+
+.about-hero h2 {
+    color: white;
+}
+
+.about-content {
+    padding: 4rem 5%;
+    background-color: var(--lighter-bg);
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.about-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.about-section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-section h3 {
+    color: var(--primary-dark);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+.about-section h3 i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.about-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-area h4 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-list {
+    list-style: none;
+}
+
+.skill-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.skill-list li:before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.skill-list li:last-child {
+    border-bottom: none;
+}
+
+.image-gallery {
+    margin-top: 2rem;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+figcaption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+blockquote {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    font-style: italic;
+    color: var(--secondary-color);
+    margin: 1.5rem 0;
+}
+
+/* Dark Mode Support */
+.dark-mode .about-content {
+    background-color: #252525;
+}
+
+.dark-mode .about-section {
+    background-color: #333333;
+}
+
+.dark-mode blockquote {
+    background-color: #2c2c2c;
+}
+
+.dark-mode .skill-list li {
+    border-bottom: 1px solid #444;
+}
+
 footer {
     background-color: #2c2c2c;
     color: #f5f5f5;
@@ -494,7 +631,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Media Queries */
 @media (max-width: 992px) {
     .hero-content {
         flex-direction: column-reverse;
@@ -570,7 +706,6 @@ footer {
     }
 }
 
-/* Dark Mode Styles - To be activated via JavaScript */
 .dark-mode {
     --primary-color: #4e9bf5;
     --primary-dark: #1a73e8;
@@ -612,7 +747,6 @@ footer {
     background-color: #444444;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
