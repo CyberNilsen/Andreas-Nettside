@@ -548,7 +548,6 @@ blockquote {
     margin: 1.5rem 0;
 }
 
-/* Dark Mode Support */
 .dark-mode .about-content {
     background-color: #252525;
 }
