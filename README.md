@@ -29,4 +29,4 @@ To view the website, you can visit [my website via the link here](https://cybern
 
 Here’s a screenshot of how the website looks:
 
-![Screenshot of Andreas-Site](https://cybernilsen.github.io/Andreas-Nettside/Images/Skjermbilde.png)
+![My website](https://github.com/user-attachments/assets/6b2fc5c1-d26e-4392-8c9d-1bba931dd5e8)
