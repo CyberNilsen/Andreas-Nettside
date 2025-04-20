@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberNilsen </title>
+    <meta name="description" content="Andreas Nilsen - Cybersecurity specialist and programmer with expertise in Python, C#, and PHP">
+    <title>Andreas Nilsen | Cybersecurity Specialist</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="icon" type="image/png" href="Images/CyberNilsen.png">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">CyberNilsen</a></h1>
+    <header id="main-header">
+        <h1><a href="index.html">Andreas Nilsen</a></h1>
         <nav>
             <ul>
-                <li><a href="about.html">Om Meg</a></li>
-                <li><a href="projects.html">Prosjekter</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -23,39 +26,144 @@
     <section class="hero">
         <div class="hero-content">
             <div class="text">
-                <h2>Hei, jeg er Andreas!</h2>
-                <p>Jeg er veldig interessert i cybersikkerhet og programmering generelt. Jeg liker å programmere og lage ting siden dette er gøy!</p>
-                <a href="projects.html" class="btn">Se Mine Prosjekter</a>
-                <a href="contact.html" class="btn">Kontakt Meg</a>
+                <h2>Hello, I'm Andreas!</h2>
+                <p>Cybersecurity specialist and programmer with a passion for developing secure applications and solving complex problems.</p>
+                <div class="hero-cta">
+                    <a href="projects.html" class="btn primary-btn">View My Projects</a>
+                    <a href="files/andreas-nilsen-cv.pdf" class="btn secondary-btn">Download CV</a>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="Images/CyberNilsen.png" alt="Bilde">
+                <img src="Images/CyberNilsen.png" alt="Andreas Nilsen">
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise">
+        <h2>Areas of Expertise</h2>
+        <div class="expertise-container">
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Cybersecurity</h3>
+                <p>Penetration testing, vulnerability assessment, and security hardening for various systems and applications.</p>
+            </div>
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Programming</h3>
+                <p>Developing secure applications with C#, Python, PHP, and web technologies.</p>
+            </div>
+            <div class="expertise-card">
+                <div class="expertise-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>Tool Development</h3>
+                <p>Creating specialized tools for cybersecurity testing and productivity enhancement.</p>
             </div>
         </div>
     </section>
 
     <section class="skills">
-        <h2>Mine Ferdigheter</h2>
-        <div class="skills-list">
-            <div class="skill">
-                <h3>HTML</h3>
-                <div class="skill-bar" style="width: 90%"></div>
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>Programming</h3>
+                <div class="skills-list">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <h4>Python</h4>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <h4>C#</h4>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <h4>PHP</h4>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="skill">
-                <h3>Python</h3>
-                <div class="skill-bar" style="width: 80%"></div>
+            <div class="skills-category">
+                <h3>Web Development</h3>
+                <div class="skills-list">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <h4>HTML</h4>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <h4>CSS</h4>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <h4>JavaScript</h4>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="skill">
-                <h3>C Sharp</h3>
-                <div class="skill-bar" style="width: 80%"></div>
-            </div>
-            <div class="skill">
-                <h3>PHP</h3>
-                <div class="skill-bar" style="width: 80%"></div>
-            </div>
-            <div class="skill">
-                <h3>CSS</h3>
-                <div class="skill-bar" style="width: 80%"></div>
+            <div class="skills-category">
+                <h3>Cybersecurity</h3>
+                <div class="skills-list">
+                    <div class="skill">
+                        <div class="skill-info">
+                            <h4>Penetration Testing</h4>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <h4>Network Security</h4>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <h4>Application Security</h4>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -64,53 +172,76 @@
         <h2>Featured Projects</h2>
         <div class="project-container">
             <div class="project">
-                <img src="Images/CyberToolsV1,1.png" alt="Project 1">
-                <h3>CyberTools </h3>
-                <p>Program kodet med C Sharp der jeg legger til verktøy/redskaper.</p>
-                <a href="projects.html" class="btn">Se mer</a>
+                <img src="Images/CyberToolsV1,1.png" alt="CyberTools Project">
+                <h3>CyberTools</h3>
+                <p>A comprehensive utility suite developed in C# that includes security assessment tools, productivity enhancers, and development utilities.</p>
+                <div class="project-tech">
+                    <span>C#</span>
+                    <span>.NET</span>
+                    <span>WPF</span>
+                </div>
+                <a href="projects/cybertools.html" class="btn">View Details</a>
             </div>
             <div class="project">
-                <img src="Images/CyberVaultV1.png" alt="Project 1">
-                <h3>CyberVault </h3>
-                <p>Passord manager som jeg har laget med en venn i C Sharp.</p>
-                <a href="projects.html" class="btn">Se mer</a>
+                <img src="Images/CyberVaultV1.png" alt="CyberVault Project">
+                <h3>CyberVault</h3>
+                <p>A secure password manager built with C# that features military-grade encryption, secure credential storage, and intuitive user interface.</p>
+                <div class="project-tech">
+                    <span>C#</span>
+                    <span>AES-256</span>
+                    <span>SQLite</span>
+                </div>
+                <a href="projects/cybervault.html" class="btn">View Details</a>
             </div>
-            
-            
+        </div>
+        <div class="view-all">
+            <a href="projects.html" class="btn outline-btn">View All Projects</a>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Interested in Collaboration?</h2>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            <a href="contact.html" class="btn primary-btn">Get In Touch</a>
         </div>
     </section>
 
     <footer>
         <div class="footer-container">
             <div class="footer-column">
-                <h3>Om Meg</h3>
-                <p>Jeg er veldig interessert i cybersikkerhet og programmering generelt. Jeg liker å programmere og lage ting siden dette er gøy!</p>
+                <h3>About Me</h3>
+                <p>Cybersecurity specialist and programmer with a passion for developing secure applications and solving complex problems.</p>
             </div>
             <div class="footer-column">
-                <h3>Lenker</h3>
+                <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="about.html">Om Meg</a></li>
-                    <li><a href="projects.html">Prosjekter</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Kontakt</h3>
+                <h3>Contact</h3>
                 <p>Email: <a href="mailto:andreasnilsen07@hotmail.com">andreasnilsen07@hotmail.com</a></p>
                 <p>GitHub: <a href="https://github.com/CyberNilsen" target="_blank">github.com/CyberNilsen</a></p>
             </div>
             <div class="footer-column">
-                <h3>Følg Meg</h3>
+                <h3>Connect</h3>
                 <ul class="social-icons">
-                    <li><a href="https://github.com/CyberNilsen" target="_blank"><img src="Images/Github.png" alt="GitHub"></a></li>
-                    
+                    <li><a href="https://github.com/CyberNilsen" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/your-handle" target="_blank"><i class="fab fa-twitter"></i></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 CyberNilsen. Alle rettigheter reservert.</p>
+            <p>&copy; 2025 Andreas Nilsen. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
