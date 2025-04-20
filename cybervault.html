@@ -1,122 +1,263 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberVault - Passordhvelv</title>
+    <meta name="description" content="CyberVault - Secure password vault developed by Andreas Nilsen">
+    <title>CyberVault - Password Vault | Andreas Nilsen</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="icon" type="image/png" href="Images/CyberNilsen.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">CyberNilsen</a></h1>
+    <header id="main-header">
+        <h1><a href="index.html">Andreas Nilsen</a></h1>
         <nav>
             <ul>
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="projects.html">Prosjekter</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Me</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="content">
-        <h2>🔒 CyberVault</h2>
-        <p>CyberVault er et passordhvelv-program skrevet i C#. Dette programmet lar deg lagre og administrere passordene dine sikkert, med kryptering og enkel tilgang.</p>
+    <section class="project-hero">
+        <div class="hero-content">
+            <div class="project-hero-info">
+                <h2>CyberVault</h2>
+                <p>A secure password vault application for storing and managing your passwords with encryption and easy access</p>
+                <div class="project-tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">.NET</span>
+                    <span class="tag">Security</span>
+                    <span class="tag">Encryption</span>
+                </div>
+            </div>
+            <div class="project-hero-image">
+                <img src="Images/CyberVaultV2.png" alt="CyberVault Interface">
+            </div>
+        </div>
+    </section>
 
-        <div class="feature-box">
-            <h3>Hovedfunksjoner:</h3>
-            <ul>
-                <li>🔑 Sikker lagring av passord</li>
-                <li>🔒 AES-kryptering</li>
-                <li>🔓 2-faktor autentisering</li>
+    <section class="project-overview">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <div class="overview-grid">
+                <div class="overview-description">
+                    <p class="overview-intro">CyberVault is a password vault application that allows you to securely store and manage your passwords, with robust encryption and a user-friendly interface. The program ensures that your digital identities are protected with the highest security standards.</p>
+                    
+                    <div class="overview-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-shield-alt highlight-icon"></i>
+                            <div>
+                                <h4>Security Focused</h4>
+                                <p>CyberVault uses advanced AES encryption to ensure your passwords are protected against unauthorized access.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-lock highlight-icon"></i>
+                            <div>
+                                <h4>Two-factor Authentication</h4>
+                                <p>An extra security layer ensures that only you have access to your stored passwords.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
-            </ul>
-        </div>
-        <h2 class="version-title">📌 CyberVault V2.0</h2>
-
-        <h3>📥 Last Ned CyberVault</h3>
-        <p>Velg ønsket versjon for nedlasting:</p>
-        <div class="download-buttons">
-            <a href="downloads/CyberVaultV2.exe" class="btn btn-primary">💾 Installer (EXE)</a>
-            <a href="downloads/CyberVaultV2.zip" class="btn btn-secondary">📦 ZIP Fil</a>
-            <a href="downloads/ExtensionV2.zip" class="btn btn-secondary">📦 ZIP Fil extension</a>
-        </div>
-
-
-        <h2 class="version-title">📌 CyberVault V1.0</h2>
-
-        <h3>📥 Last Ned CyberVault</h3>
-        <p>Velg ønsket versjon for nedlasting:</p>
-        <div class="download-buttons">
-            <a href="downloads/CyberVaultInstaller.exe" class="btn btn-primary">💾 Installer (EXE)</a>
-            <a href="downloads/CyberVault.zip" class="btn btn-secondary">📦 ZIP Fil</a>
-        </div>
-
-        <h3>📜 Versjonslogg</h3>
-        <div class="version-log">
-            <div class="version-entry">
-                <div class="version-header">
-                    <span class="version-number">V2.0</span>
-                    <span class="version-date">🗓️ 27. Mars 2025</span>
-                    <img src="Images/CyberVaultV2.png" alt="CyberTools V1" class="version-image">
+                <div class="overview-visual">
+                    <div class="feature-showcase">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>
+                                <div class="feature-icon"><i class="fas fa-key"></i></div>
+                                <div class="feature-details">
+                                    <h4>Secure Password Storage</h4>
+                                    <p>Store all your passwords in one safe place</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                                <div class="feature-details">
+                                    <h4>AES Encryption</h4>
+                                    <p>Advanced encryption protects your sensitive data</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                                <div class="feature-details">
+                                    <h4>2-Factor Authentication</h4>
+                                    <p>Extra security layer for better protection</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                                <div class="feature-details">
+                                    <h4>Google Extension</h4>
+                                    <p>Auto-fill passwords in your browser (V2.0)</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <p>🚀 Andre utgivelse med Google extension lagt til</p>
-                <ul>
-                    <li>🔑 Google extension som autofyller passordene dine!</li>
-                </ul>
             </div>
         </div>
-        <div class="version-log">
-            <div class="version-entry">
-                <div class="version-header">
-                    <span class="version-number">V1.0</span>
-                    <span class="version-date">🗓️ 21. Mars 2025</span>
-                    <img src="Images/CyberVaultV1.png" alt="CyberTools V1" class="version-image">
+    </section>
+
+    <section class="project-downloads">
+        <div class="container">
+            <h2>Download CyberVault</h2>
+            <p class="download-intro">Choose the version that best suits your needs. All versions come with both installer and standalone ZIP packages.</p>
+            
+            <div class="versions">
+                <div class="version">
+                    <div class="version-header">
+                        <h3>CyberVault V2.0 <span class="version-badge latest">Latest Version</span></h3>
+                        <span class="version-date"><i class="far fa-calendar-alt"></i> March 27, 2025</span>
+                    </div>
+                    <div class="version-description">
+                        <p>Second release with Google extension that auto-fills your passwords directly in your browser.</p>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="downloads/CyberVaultV2.exe" class="btn primary-btn"><i class="fas fa-download"></i> Download Installer</a>
+                        <a href="downloads/CyberVaultV2.zip" class="btn outline-btn"><i class="fas fa-file-archive"></i> Download ZIP</a>
+                        <a href="downloads/ExtensionV2.zip" class="btn outline-btn"><i class="fas fa-puzzle-piece"></i> Download Extension</a>
+                    </div>
                 </div>
-                <p>🚀 Første utgivelse med grunnleggende funksjoner</p>
-                <ul>
-                    <li>🔑 Sikker passordlagring</li>
-                    <li>🔒 AES-kryptering for økt sikkerhet</li>
-                    <li>🔓 Støtte for 2-faktor autentisering</li>
-                </ul>
+
+                <div class="version">
+                    <div class="version-header">
+                        <h3>CyberVault V1.0</h3>
+                        <span class="version-date"><i class="far fa-calendar-alt"></i> March 21, 2025</span>
+                    </div>
+                    <div class="version-description">
+                        <p>First release with basic password storage and security features.</p>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="downloads/CyberVaultInstaller.exe" class="btn primary-btn"><i class="fas fa-download"></i> Download Installer</a>
+                        <a href="downloads/CyberVault.zip" class="btn outline-btn"><i class="fas fa-file-archive"></i> Download ZIP</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <h3>🔮 Kommende Funksjoner</h3>
-        <ul class="future-features">
-            <li>🌐 Google extension</li>
-        </ul>
+    <section class="version-history">
+        <div class="container">
+            <h2>Version History</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span>March 27, 2025</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>CyberVault V2.0</h3>
+                        <img src="Images/CyberVaultV2.png" alt="CyberVault V2" class="version-image">
+                        <ul>
+                            <li>Added Google extension for auto-filling passwords</li>
+                            <li>Improved user interface for easier navigation</li>
+                            <li>Optimized performance and reduced resource usage</li>
+                            <li>Added support for multiple password categories</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span>March 21, 2025</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>CyberVault V1.0</h3>
+                        <img src="Images/CyberVaultV1.png" alt="CyberVault V1" class="version-image">
+                        <ul>
+                            <li>First release with basic functionality</li>
+                            <li>Secure password storage with AES encryption</li>
+                            <li>Support for 2-factor authentication</li>
+                            <li>Simple user interface for password management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="container">
+            <h2>Project Details</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>System Requirements</h3>
+                    <p>Windows 10/11<br>
+                    .NET Framework 4.8+<br>
+                    1GB RAM minimum<br>
+                    50MB disk space</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Target Audience</h3>
+                    <p>Security-conscious users<br>
+                    Businesses needing password management<br>
+                    Individuals with many online accounts</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Future Features</h3>
+                    <p>password generator</p>
+  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Interested in collaboration?</h2>
+            <p>Do you have ideas for improving CyberVault or want to discuss how it can be integrated into your security workflow? I'm always open to discussing potential improvements or collaborations.</p>
+            <a href="contact.html" class="btn primary-btn">Get In Touch</a>
+        </div>
     </section>
 
     <footer>
         <div class="footer-container">
             <div class="footer-column">
-                <h3>Om Meg</h3>
-                <p>Jeg er veldig interessert i cybersikkerhet og programmering generelt. Jeg liker å programmere og lage ting siden dette er gøy!</p>
+                <h3>About Me</h3>
+                <p>Cybersecurity enthusiast and programmer with a passion for developing secure applications and solving complex problems.</p>
             </div>
             <div class="footer-column">
-                <h3>Lenker</h3>
+                <h3>Links</h3>
                 <ul>
-                    <li><a href="about.html">Om Meg</a></li>
-                    <li><a href="projects.html">Prosjekter</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Kontakt</h3>
+                <h3>Contact</h3>
                 <p>Email: <a href="mailto:andreasnilsen07@hotmail.com">andreasnilsen07@hotmail.com</a></p>
                 <p>GitHub: <a href="https://github.com/CyberNilsen" target="_blank">github.com/CyberNilsen</a></p>
             </div>
             <div class="footer-column">
-                <h3>Følg Meg</h3>
+                <h3>Follow Me</h3>
                 <ul class="social-icons">
-                    <li><a href="https://github.com/CyberNilsen" target="_blank"><img src="Images/Github.png" alt="GitHub"></a></li>
+                    <li><a href="https://github.com/CyberNilsen" target="_blank"><i class="fab fa-github"></i></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 CyberNilsen. Alle rettigheter reservert.</p>
+            <p>© 2025 Andreas Nilsen. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
