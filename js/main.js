@@ -1,14 +1,14 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-    addHeaderScrollEffect();
-    animateSkillBars();
+    initializeHeader();
+    initializeSkillBars();
     highlightCurrentPage();
-    addCyberSecurityEffects();
+    addHeroEffects();
     addScrollAnimations();
+    initializeProjectHoverEffects();
 });
 
 
-function addHeaderScrollEffect() {
+function initializeHeader() {
     const header = document.getElementById('main-header');
     
     window.addEventListener('scroll', function() {
@@ -18,7 +18,18 @@ function addHeaderScrollEffect() {
             header.classList.remove('scrolled');
         }
     });
+    
+    addCustomCSS(`
+        /* MODIFIED: Increased header size when scrolled */
+        #main-header.scrolled {
+            padding: 15px 40px !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    `);
 }
+
 
 function highlightCurrentPage() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -33,7 +44,7 @@ function highlightCurrentPage() {
 }
 
 
-function animateSkillBars() {
+function initializeSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
     if (!skillBars.length) return;
     
@@ -50,7 +61,7 @@ function animateSkillBars() {
                 const originalWidth = bar.getAttribute('data-width');
                 
                 setTimeout(() => {
-                    bar.style.transition = 'width 1.2s ease-out';
+                    bar.style.transition = 'width 1.5s cubic-bezier(0.25, 0.1, 0.25, 1)';
                     bar.style.width = originalWidth;
                 }, 200);
                 
@@ -65,16 +76,17 @@ function animateSkillBars() {
 }
 
 
-function addCyberSecurityEffects() {
+function addHeroEffects() {
     const heroSection = document.querySelector('.hero');
     if (!heroSection) return;
     
-    const effectContainer = document.createElement('div');
-    effectContainer.classList.add('cyber-effect-container');
-    heroSection.prepend(effectContainer);
+    const heroContent = heroSection.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.classList.add('hero-content-animated');
+    }
 
     const heroHeading = heroSection.querySelector('h2');
-    if (heroHeading && window.location.pathname.includes('index.html') || window.location.pathname.endsWith('/')) {
+    if (heroHeading && (window.location.pathname.includes('index.html') || window.location.pathname.endsWith('/'))) {
         const originalText = heroHeading.textContent;
         heroHeading.textContent = '';
         heroHeading.classList.add('typing-effect');
@@ -88,9 +100,15 @@ function addCyberSecurityEffects() {
                 clearInterval(typingInterval);
                 heroHeading.classList.add('typing-complete');
             }
-        }, 100);
+        }, 80); 
+    }
+    
+    const ctaButton = heroSection.querySelector('.btn');
+    if (ctaButton) {
+        ctaButton.classList.add('cta-animated');
     }
 }
+
 
 function addScrollAnimations() {
     const sections = document.querySelectorAll('section:not(.hero)');
@@ -102,7 +120,7 @@ function addScrollAnimations() {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 });
     
     sections.forEach(section => {
         section.classList.add('section-hidden');
@@ -111,13 +129,33 @@ function addScrollAnimations() {
 }
 
 
+function initializeProjectHoverEffects() {
+    const projects = document.querySelectorAll('.project');
+    
+    projects.forEach(project => {
+        project.addEventListener('mouseenter', () => {
+            project.classList.add('project-hover');
+        });
+        
+        project.addEventListener('mouseleave', () => {
+            project.classList.remove('project-hover');
+        });
+    });
+}
+
+
+function addCustomCSS(cssText) {
+    const styleEl = document.createElement('style');
+    styleEl.textContent = cssText;
+    document.head.appendChild(styleEl);
+}
+
 (function addCustomStyles() {
     const customStyles = `
-       
         .section-hidden {
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 0.8s, transform 0.8s;
+            transition: opacity 0.9s ease-out, transform 0.9s ease-out;
         }
         
         .section-visible {
@@ -127,33 +165,21 @@ function addScrollAnimations() {
         
         .project {
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                        box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
         }
         
         .project-hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 255, 140, 0.2);
-        }
-        
-        .cyber-effect-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-            pointer-events: none;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 78, 146, 0.15);
         }
         
         .typing-effect::after {
             content: '|';
             animation: cursor-blink 1s step-end infinite;
+            color: #0056b3;
         }
         
         .typing-complete::after {
@@ -161,11 +187,53 @@ function addScrollAnimations() {
             content: '';
         }
         
+        /* Animated CTA button */
+        .cta-animated {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-animated::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.2) 50%, 
+                rgba(255, 255, 255, 0) 100%);
+            animation: shine 3s infinite;
+        }
+        
+        .skill-bar {
+            overflow: hidden;
+            border-radius: 4px;
+            background-color: rgba(0, 60, 120, 0.1);
+        }
+        
+        .skill-progress {
+            background: linear-gradient(90deg, #0056b3, #007bff);
+            position: relative;
+        }
+        
+        /* Animation keyframes */
         @keyframes cursor-blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
         
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 100%; }
+            100% { left: 100%; }
+        }
+        
+        .hero-content-animated {
+            position: relative;
+            z-index: 2;
+        }
     `;
     
     const styleEl = document.createElement('style');

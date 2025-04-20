@@ -120,7 +120,7 @@ nav a:hover::after {
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--primary-dark);
+    color: var(--primary-color);
     line-height: 1.2;
 }
 
@@ -1756,7 +1756,7 @@ footer {
         gap: 1rem;
     }
 
-    .highlight-item {
+     .highlight-item {
         flex-direction: column;
         align-items: center;
         text-align: center;
