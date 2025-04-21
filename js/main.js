@@ -122,9 +122,17 @@ function addScrollAnimations() {
         });
     }, { threshold: 0.15 });
     
-    sections.forEach(section => {
+    sections.forEach((section, index) => {
         section.classList.add('section-hidden');
-        observer.observe(section);
+        
+        // Make the first content section visible immediately
+        if (index === 0) {
+            setTimeout(() => {
+                section.classList.add('section-visible');
+            }, 100); // Small delay to ensure transition works
+        } else {
+            observer.observe(section);
+        }
     });
 }
 
