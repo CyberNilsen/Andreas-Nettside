@@ -125,11 +125,10 @@ function addScrollAnimations() {
     sections.forEach((section, index) => {
         section.classList.add('section-hidden');
         
-        // Make the first content section visible immediately
         if (index === 0) {
             setTimeout(() => {
                 section.classList.add('section-visible');
-            }, 100); // Small delay to ensure transition works
+            }, 100);
         } else {
             observer.observe(section);
         }
