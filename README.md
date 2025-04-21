@@ -11,7 +11,7 @@ On this website, you can learn more about my skills, the projects I am working o
 ## Features
 
 - A **responsive layout** that works well on both desktop and mobile.
-- **Skills**: You can see an overview of my skills as a developer, including HTML, CSS, Python, and more.
+- **About**: You can see an overview of my skills as a developer, including HTML, CSS, Python, and more.
 - **Projects**: A section where you can see some of my selected projects.
 - **Contact**: Contact info so you can reach me via email or GitHub.
 
