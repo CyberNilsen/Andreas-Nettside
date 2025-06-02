@@ -1,6 +1,6 @@
 # Andreas-Site
 
-Welcome to **Andreas-Site**! This project is a personal website created to share information about me, my skills, and my projects. The website is coded using HTML and CSS.
+Welcome to **Andreas-Site**! This project is a personal website created to share information about me, my skills, and my projects. The website is coded using HTML, CSS and JAVASCRIPT.
 
 ## About Me
 
