@@ -8,6 +8,90 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="icon" type="image/png" href="Images/CyberNilsen.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <style>
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-category {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+        }
+
+        .skills-category h3 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background: #3498db;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .skill-tag:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .skill-tag.primary {
+            background: #2c3e50;
+            border-color: #34495e;
+        }
+
+        .skill-tag.primary:hover {
+            background: #34495e;
+        }
+
+        .skill-tag.learning {
+            background: #3498db;
+            border-color: #3498db;
+            position: relative;
+        }
+
+        .skill-tag.learning:hover {
+            background: #3498db;
+        }
+
+        .skill-tag.learning::after {
+            content: "📚";
+            margin-left: 0.5rem;
+        }
+
+        .skills {
+            padding: 4rem 2rem;
+            background: #fff;
+        }
+
+        .skills h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+    </style>
 </head>
 <body>
     <header id="main-header">
@@ -44,7 +128,7 @@
                     <i class="fas fa-shield-alt"></i>
                 </div>
                 <h3>Cybersecurity</h3>
-                <p>Penetration testing and wifi pentesting</p>
+                <p>Penetration testing, WiFi pentesting, and cybersecurity tool development</p>
             </div>
             <div class="expertise-card">
                 <div class="expertise-icon">
@@ -64,95 +148,68 @@
     </section>
 
     <section class="skills">
-        <h2>Technical Skills</h2>
+        <h2>Technical Skills & Expertise</h2>
         <div class="skills-container">
             <div class="skills-category">
-                <h3>Programming</h3>
+                <h3>Core Programming Languages</h3>
                 <div class="skills-list">
-                    <div class="skill">
-                        <div class="skill-info">
-                            <h4>Python</h4>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-info">
-                            <h4>C#</h4>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-info">
-                            <h4>PHP</h4>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag learning">Rust</span>
                 </div>
             </div>
             <div class="skills-category">
-                <h3>Web Development</h3>
+                <h3>Web Technologies</h3>
                 <div class="skills-list">
-                    <div class="skill">
-                        <div class="skill-info">
-                            <h4>HTML</h4>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-info">
-                            <h4>CSS</h4>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-info">
-                            <h4>JavaScript</h4>
-                            <span>20%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 20%"></div>
-                        </div>
-                    </div>
-                    
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">MySQL</span>
                 </div>
             </div>
             <div class="skills-category">
-                <h3>Cybersecurity</h3>
+                <h3>Cybersecurity & Ethical Hacking</h3>
                 <div class="skills-list">
-                    <div class="skill">
-                        <div class="skill-info">
-                            <h4>Penetration Testing</h4>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-info">
-                            <h4>Network Security</h4>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                   
+                    <span class="skill-tag">Penetration Testing</span>
+                    <span class="skill-tag">WiFi Pentesting</span>
+                    <span class="skill-tag">Network Security</span>
+                    <span class="skill-tag">TCP Port Scanning</span>
+                    <span class="skill-tag">Honeypots</span>
+                    <span class="skill-tag">Steganography</span>
+                    <span class="skill-tag">CTF Challenges</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Databases & Storage</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">SQLite</span>
+                    <span class="skill-tag">MariaDB</span>
+                    <span class="skill-tag">Local Encryption</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Development Tools & Frameworks</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">.NET Framework</span>
+                    <span class="skill-tag">WPF</span>
+                    <span class="skill-tag">Qt (C++)</span>
+                    <span class="skill-tag">Visual Studio</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Security & Systems</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Kali Linux</span>
+                    <span class="skill-tag">Windows Security</span>
+                    <span class="skill-tag">AES-256 Encryption</span>
+                    <span class="skill-tag">Network Analysis</span>
+                    <span class="skill-tag">USB Monitoring</span>
                 </div>
             </div>
         </div>
