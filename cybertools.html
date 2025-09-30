@@ -6,6 +6,7 @@
     <meta name="description" content="CyberTools - A comprehensive cybersecurity utility suite developed by Andreas Nilsen">
     <title>CyberTools | Andreas Nilsen</title>
     <link rel="icon" type="image/png" href="Images/CyberNilsen.png">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <style>
         * {
@@ -22,38 +23,9 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Dark mode base */
         body.dark-mode {
             background: #0d0d0d;
             color: #e1e1e1;
-        }
-
-        /* Header styles */
-        #main-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        #main-header.scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #main-header h1 a {
-            color: #333;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 700;
         }
 
         nav ul {
@@ -78,7 +50,6 @@
             display: flex;
             align-items: center;
             font-size: 1.2rem;
-            cursor: pointer;
         }
 
         .theme-toggle-link i {
@@ -89,7 +60,6 @@
             transform: rotate(20deg);
         }
 
-        /* Theme toggle button */
         .theme-toggle {
             position: fixed;
             bottom: 2rem;
@@ -115,20 +85,7 @@
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
         }
 
-        /* Dark mode header */
-        .dark-mode #main-header {
-            background: rgba(26, 26, 26, 0.95);
-        }
-
-        .dark-mode #main-header.scrolled {
-            background: rgba(26, 26, 26, 0.98);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .dark-mode #main-header h1 a {
-            color: #ffffff;
-        }
-
+        /* Dark mode navbar */
         .dark-mode nav a {
             color: #e1e1e1;
         }
@@ -137,7 +94,20 @@
             color: #4e9bf5;
         }
 
-        /* Project hero section */
+        .dark-mode #main-header {
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .dark-mode #main-header.scrolled {
+            background: rgba(26, 26, 26, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode #main-header h1 a {
+            color: #ffffff;
+        }
+
         .project-hero {
             padding: 8rem 5% 4rem;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -192,7 +162,6 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Dark mode hero */
         .dark-mode .project-hero {
             background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
         }
@@ -216,7 +185,6 @@
             border-color: #1a73e8;
         }
 
-        /* Project overview section */
         .project-overview {
             padding: 4rem 5%;
             background: #ffffff;
@@ -357,7 +325,6 @@
             color: #1a73e8;
         }
 
-        /* Dark mode overview */
         .dark-mode .project-overview {
             background: #0d0d0d;
         }
@@ -402,7 +369,6 @@
             color: #4e9bf5;
         }
 
-        /* Downloads section */
         .project-downloads {
             padding: 4rem 5%;
             background: #f8f9fa;
@@ -515,7 +481,6 @@
             color: white;
         }
 
-        /* Dark mode downloads */
         .dark-mode .project-downloads {
             background: #1a1a1a;
         }
@@ -575,7 +540,6 @@
             color: white;
         }
 
-        /* Project details section */
         .project-details {
             padding: 4rem 5%;
             background: #ffffff;
@@ -624,7 +588,6 @@
             line-height: 1.8;
         }
 
-        /* Dark mode details */
         .dark-mode .project-details {
             background: #0d0d0d;
         }
@@ -655,7 +618,6 @@
             color: #d1d1d1;
         }
 
-        /* Version history section */
         .version-history {
             padding: 4rem 5%;
             background: #f8f9fa;
@@ -746,7 +708,6 @@
             font-weight: bold;
         }
 
-        /* Dark mode version history */
         .dark-mode .version-history {
             background: #1a1a1a;
         }
@@ -786,7 +747,6 @@
             color: #4e9bf5;
         }
 
-        /* CTA section */
         .cta-section {
             padding: 4rem 5%;
             background: linear-gradient(135deg, #1a73e8 0%, #0d5cb5 100%);
@@ -812,7 +772,6 @@
             background: linear-gradient(135deg, #4e9bf5 0%, #1a73e8 100%);
         }
 
-        /* Footer */
         footer {
             background: #1a1a1a;
             color: #e1e1e1;
@@ -878,15 +837,6 @@
             color: #888;
         }
 
-        .dark-mode footer {
-            background: #1a1a1a;
-        }
-
-        .dark-mode .footer-bottom {
-            border-top: 1px solid #333;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             .hero-content,
             .overview-grid,
@@ -1255,6 +1205,7 @@
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
     <script>
         // Dark mode toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
