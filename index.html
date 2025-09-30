@@ -28,6 +28,10 @@
             transition: transform var(--transition-speed) ease;
         }
 
+        .dark-mode .hero-image img {
+            border-color: #444;
+        }
+
         .hero-image img:hover {
             transform: scale(0.85);
         }
@@ -45,6 +49,12 @@
             padding: 2rem;
             border-radius: 10px;
             border: 1px solid #e9ecef;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .dark-mode .skills-category {
+            background: #2c2c2c;
+            border-color: #444;
         }
 
         .skills-category h3 {
@@ -53,6 +63,12 @@
             font-size: 1.4rem;
             border-bottom: 2px solid #3498db;
             padding-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .dark-mode .skills-category h3 {
+            color: #4e9bf5;
+            border-bottom-color: #4e9bf5;
         }
 
         .skills-list {
@@ -76,6 +92,16 @@
             background: #2980b9;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .dark-mode .skill-tag {
+            background: #4e9bf5;
+            color: #fff;
+        }
+
+        .dark-mode .skill-tag:hover {
+            background: #1a73e8;
+            box-shadow: 0 4px 12px rgba(78, 155, 245, 0.3);
         }
 
         .skill-tag.primary {
@@ -105,6 +131,11 @@
         .skills {
             padding: 4rem 2rem;
             background: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        .dark-mode .skills {
+            background: #1a1a1a;
         }
 
         .skills h2 {
@@ -112,10 +143,39 @@
             color: #2c3e50;
             margin-bottom: 3rem;
             font-size: 2.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .dark-mode .skills h2 {
+            color: #4e9bf5;
+        }
+
+        /* Better navbar styling in dark mode */
+        .dark-mode nav a {
+            color: #e1e1e1;
+        }
+
+        .dark-mode nav a:hover {
+            color: #4e9bf5;
+        }
+
+        /* Theme toggle in navbar */
+        .theme-toggle-link {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .theme-toggle-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle-link:hover i {
+            transform: rotate(20deg);
         }
     </style>
 </head>
-<body>
+<body class="dark-mode">
     <header id="main-header">
         <h1><a href="index.html">Andreas Nilsen</a></h1>
         <nav>
@@ -123,9 +183,14 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="theme-toggle-nav" class="theme-toggle-link"><i class="fas fa-sun"></i></a></li>
             </ul>
         </nav>
     </header>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-sun"></i>
+    </button>
 
     <section class="hero">
         <div class="hero-content">
@@ -307,6 +372,57 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Dark mode toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleNav = document.getElementById('theme-toggle-nav');
+        const body = document.body;
+        
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        
+        // Apply the theme on page load
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            updateThemeIcons('dark');
+        } else {
+            body.classList.remove('dark-mode');
+            updateThemeIcons('light');
+        }
+        
+        // Function to update theme icons
+        function updateThemeIcons(theme) {
+            const iconClass = theme === 'dark' ? 'fa-sun' : 'fa-moon';
+            themeToggle.querySelector('i').className = `fas ${iconClass}`;
+            themeToggleNav.querySelector('i').className = `fas ${iconClass}`;
+        }
+        
+        // Toggle theme function
+        function toggleTheme() {
+            body.classList.toggle('dark-mode');
+            
+            // Save theme preference
+            const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+            updateThemeIcons(theme);
+        }
+        
+        // Add event listeners to both toggle buttons
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleTheme();
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>

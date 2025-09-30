@@ -8,8 +8,117 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="icon" type="image/png" href="Images/CyberNilsen.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <style>
+        /* Theme toggle in navbar */
+        .theme-toggle-link {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .theme-toggle-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle-link:hover i {
+            transform: rotate(20deg);
+        }
+
+        /* Better navbar styling in dark mode */
+        .dark-mode nav a {
+            color: #e1e1e1;
+        }
+
+        .dark-mode nav a:hover {
+            color: #4e9bf5;
+        }
+
+        /* Fix header in dark mode */
+        .dark-mode #main-header {
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .dark-mode #main-header.scrolled {
+            background: rgba(26, 26, 26, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Improve dark mode content visibility */
+        .dark-mode .about-content {
+            background: #1a1a1a;
+        }
+
+        .dark-mode .about-section {
+            background: #2c2c2c;
+            border-color: #444;
+        }
+
+        .dark-mode .about-section h3,
+        .dark-mode .about-section h4 {
+            color: #4e9bf5;
+        }
+
+        .dark-mode .about-section p,
+        .dark-mode .about-section li {
+            color: #e1e1e1;
+        }
+
+        .dark-mode .timeline-content h3 {
+            color: #4e9bf5;
+        }
+
+        .dark-mode .timeline-content p {
+            color: #b0b0b0;
+        }
+
+        .dark-mode .skills-grid,
+        .dark-mode .skill-area {
+            background: #2c2c2c;
+        }
+
+        .dark-mode blockquote {
+            border-left-color: #4e9bf5;
+            background: #2c2c2c;
+            color: #e1e1e1;
+        }
+
+        .dark-mode .cta-section {
+            background: #2c2c2c;
+        }
+
+        .dark-mode .cta-section h2 {
+            color: #4e9bf5;
+        }
+
+        .dark-mode .cta-section p {
+            color: #e1e1e1;
+        }
+
+        .dark-mode .education-section,
+        .dark-mode .future-plans-section {
+            background: #1a1a1a;
+        }
+
+        .dark-mode .section-title {
+            color: #4e9bf5;
+        }
+
+        .dark-mode .content-card {
+            background: #2c2c2c;
+            border-color: #444;
+        }
+
+        .dark-mode .goal-content h3 {
+            color: #4e9bf5;
+        }
+
+        .dark-mode .goal-content p {
+            color: #e1e1e1;
+        }
+    </style>
 </head>
-<body>
+<body class="dark-mode">
     <header id="main-header">
         <h1><a href="index.html">Andreas Nilsen</a></h1>
         <nav>
@@ -18,9 +127,14 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="theme-toggle-nav" class="theme-toggle-link"><i class="fas fa-sun"></i></a></li>
             </ul>
         </nav>
     </header>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-sun"></i>
+    </button>
 
     <section class="hero about-hero">
         <div class="hero-content">
@@ -36,7 +150,7 @@
             <div class="about-section who-i-am">
                 <h3><i class="fas fa-user"></i> Who I Am</h3>
                 <div class="identity-philosophy">
-                    <p>I’m a focused developer with a passion for building not just functional, but fundamentally secure software from the ground up. Growing up in Norway, my curiosity about how systems work and how they can be broken has driven me to constantly learn and improve.</p>
+                    <p>I'm a focused developer with a passion for building not just functional, but fundamentally secure software from the ground up. Growing up in Norway, my curiosity about how systems work and how they can be broken has driven me to constantly learn and improve.</p>
                     <p>I currently live in Kongsberg, Norway. Born on July 30, 2007, I've developed a strong interest in technology from an early age.</p>
                     <p>My approach combines technical precision with creative problem-solving. I enjoy the challenge of thinking like an attacker to build better defenses, and I'm particularly passionate about making security accessible to other developers.</p>
                 </div>
@@ -244,5 +358,57 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Dark mode toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleNav = document.getElementById('theme-toggle-nav');
+        const body = document.body;
+        
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        
+        // Apply the theme on page load
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            updateThemeIcons('dark');
+        } else {
+            body.classList.remove('dark-mode');
+            updateThemeIcons('light');
+        }
+        
+        // Function to update theme icons
+        function updateThemeIcons(theme) {
+            const iconClass = theme === 'dark' ? 'fa-sun' : 'fa-moon';
+            themeToggle.querySelector('i').className = `fas ${iconClass}`;
+            themeToggleNav.querySelector('i').className = `fas ${iconClass}`;
+        }
+        
+        // Toggle theme function
+        function toggleTheme() {
+            body.classList.toggle('dark-mode');
+            
+            // Save theme preference
+            const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+            updateThemeIcons(theme);
+        }
+        
+        // Add event listeners to both toggle buttons
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleTheme();
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>

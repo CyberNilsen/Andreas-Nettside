@@ -9,6 +9,128 @@
     <link rel="icon" type="image/png" href="Images/CyberNilsen.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <style>
+        /* Theme toggle in navbar */
+        .theme-toggle-link {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .theme-toggle-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle-link:hover i {
+            transform: rotate(20deg);
+        }
+
+        /* Dark mode navbar */
+        .dark-mode nav a {
+            color: #e1e1e1;
+        }
+
+        .dark-mode nav a:hover {
+            color: #4e9bf5;
+        }
+
+        .dark-mode #main-header {
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .dark-mode #main-header.scrolled {
+            background: rgba(26, 26, 26, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Dark mode project hero section */
+        .dark-mode .project-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+        }
+
+        .dark-mode .project-hero h2 {
+            color: #ffffff;
+        }
+
+        .dark-mode .project-hero p {
+            color: #d1d1d1;
+        }
+
+        .dark-mode .project-tags .tag {
+            background: #4e9bf5;
+            color: #ffffff;
+            border: 1px solid #4e9bf5;
+        }
+
+        .dark-mode .project-tags .tag:hover {
+            background: #1a73e8;
+            border-color: #1a73e8;
+        }
+
+        /* Dark mode project overview */
+        .dark-mode .project-overview {
+            background: #0d0d0d;
+        }
+
+        .dark-mode .project-overview h2,
+        .dark-mode .project-overview h3,
+        .dark-mode .project-overview h4 {
+            color: #ffffff;
+        }
+
+        .dark-mode .overview-intro,
+        .dark-mode .overview-description p,
+        .dark-mode .feature-details p {
+            color: #d1d1d1;
+        }
+
+        .dark-mode .highlight-icon {
+            color: #4e9bf5;
+        }
+
+        .dark-mode .feature-icon {
+            color: #4e9bf5;
+        }
+
+        .dark-mode .tech-stack-section {
+            background: #1a1a1a;
+            border: 1px solid #333;
+        }
+
+        .dark-mode .tech-item {
+            color: #d1d1d1;
+        }
+
+        .dark-mode .tech-item i {
+            color: #4e9bf5;
+        }
+
+        /* Dark mode project details */
+        .dark-mode .project-details {
+            background: #0d0d0d;
+        }
+
+        .dark-mode .detail-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+        }
+
+        .dark-mode .detail-card:hover {
+            border-color: #4e9bf5;
+            box-shadow: 0 8px 24px rgba(78, 155, 245, 0.2);
+        }
+
+        .dark-mode .detail-icon {
+            color: #4e9bf5;
+        }
+
+        .dark-mode .detail-card h3 {
+            color: #ffffff;
+        }
+
+        .dark-mode .detail-card p {
+            color: #d1d1d1;
+        }
 
         .project-installation {
             padding: 60px 0;
@@ -129,6 +251,118 @@
             color: #6c757d;
             line-height: 1.6;
         }
+
+        /* Dark Mode Styles */
+        .dark-mode .project-installation {
+            background: #0d0d0d;
+        }
+
+        .dark-mode .installation-intro {
+            color: #d1d1d1;
+        }
+
+        .dark-mode .step {
+            background: #1a1a1a;
+            border: 1px solid #333;
+        }
+
+        .dark-mode .step-number {
+            background: #4e9bf5;
+        }
+
+        .dark-mode .step-content h3 {
+            color: #ffffff;
+        }
+
+        .dark-mode .step-content p,
+        .dark-mode .step-content li {
+            color: #d1d1d1;
+        }
+
+        .dark-mode .code-block {
+            background: #0d0d0d;
+            border: 1px solid #333;
+        }
+
+        .dark-mode .code-block code {
+            color: #ff7b7b;
+        }
+
+        .dark-mode .features-detail {
+            background: #000000;
+        }
+
+        .dark-mode .feature-detail-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+        }
+
+        .dark-mode .feature-detail-card:hover {
+            border-color: #4e9bf5;
+            box-shadow: 0 8px 24px rgba(78, 155, 245, 0.2);
+        }
+
+        .dark-mode .feature-detail-card .feature-icon {
+            background: #4e9bf5;
+        }
+
+        .dark-mode .feature-detail-card h3 {
+            color: #ffffff;
+        }
+
+        .dark-mode .feature-detail-card p {
+            color: #d1d1d1;
+        }
+
+        /* Footer dark mode */
+        .footer-bottom {
+            border-top: none !important;
+        }
+
+        .dark-mode .footer-bottom {
+            background: transparent !important;
+            border: none !important;
+        }
+
+        .dark-mode .footer-bottom p {
+            color: #888 !important;
+        }
+
+        .social-icons a {
+            background: none !important;
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        .dark-mode .social-icons a {
+            background: none !important;
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            color: #b0b0b0 !important;
+        }
+
+        .dark-mode .social-icons a:hover {
+            background: none !important;
+            background-color: transparent !important;
+            border: none !important;
+            color: white !important;
+        }
+
+        .dark-mode .footer-column h3 {
+            color: white !important;
+        }
+
+        .dark-mode .footer-column p,
+        .dark-mode .footer-column a {
+            color: #b0b0b0 !important;
+        }
+
+        .dark-mode .footer-column a:hover {
+            color: white !important;
+        }
         
         @media (max-width: 768px) {
             .step {
@@ -147,7 +381,7 @@
         }
     </style>
 </head>
-<body>
+<body class="dark-mode">
     <header id="main-header">
         <h1><a href="index.html">Andreas Nilsen</a></h1>
         <nav>
@@ -156,9 +390,14 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="theme-toggle-nav" class="theme-toggle-link"><i class="fas fa-sun"></i></a></li>
             </ul>
         </nav>
     </header>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-sun"></i>
+    </button>
 
     <section class="project-hero">
         <div class="hero-content">
@@ -456,7 +695,6 @@
                 <ul class="social-icons">
                     <li><a href="https://github.com/CyberNilsen" target="_blank"><i class="fab fa-github"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/nilsen-andreas/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-
                 </ul>
             </div>
         </div>
@@ -466,5 +704,57 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Dark mode toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleNav = document.getElementById('theme-toggle-nav');
+        const body = document.body;
+        
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        
+        // Apply the theme on page load
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            updateThemeIcons('dark');
+        } else {
+            body.classList.remove('dark-mode');
+            updateThemeIcons('light');
+        }
+        
+        // Function to update theme icons
+        function updateThemeIcons(theme) {
+            const iconClass = theme === 'dark' ? 'fa-sun' : 'fa-moon';
+            themeToggle.querySelector('i').className = `fas ${iconClass}`;
+            themeToggleNav.querySelector('i').className = `fas ${iconClass}`;
+        }
+        
+        // Toggle theme function
+        function toggleTheme() {
+            body.classList.toggle('dark-mode');
+            
+            // Save theme preference
+            const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+            updateThemeIcons(theme);
+        }
+        
+        // Add event listeners to both toggle buttons
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleTheme();
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
